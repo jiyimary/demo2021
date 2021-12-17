@@ -1,47 +1,69 @@
+/*设置盒子样式*/
+.todolist-panel{
+    width: 20em;
+    min-height: 25em;
+    border: 1px solid rgb(190, 156, 190);
+    box-shadow: 2px 2px 2px rgb(190, 156, 190);
+    padding: 2px 2px;
+    background:url(1.png)
+}
 
+/*盒子居中对齐*/
 body {
-    width: 90vw;
-    height: 90vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
+    justify-content:center;
 }
 
-.game-pane {
-    border-style: solid;
-    border-width: 1.3px;
-    border-color: rgb(204, 204, 204);
+.todolist-panel {
+    width: 20em;
+    min-height: 25em;
 
-    box-shadow: 1px 1px 1px rgba(204, 204, 204, 0.575);
+    border: 1px solid #bbb;
+    box-shadow: 2px 2px 2px #bbb;
+    
 }
 
-.cell {
-    background-color: rgb(204, 204, 204);
-    width: 1.6em;
-    height:1.6em;
+.input-pane {
+    display: flex;
+}
 
-    border-style: outset;
+.input-pane, .list-pane {
+    padding: 5px 1em;
+}
 
+.input-pane > input {
+    flex: 1 1 8em;
+}
+
+.list-pane > .todo-item {
+    display: flex;
+    margin: 0.5em 0;
+}
+
+.list-pane > .todo-item > .title {
+    flex: 1 1 8em;
+}
+
+.important-flag {
+    width: 1.5em;
     text-align: center;
+    border: 1px solid #bbb;
+    color: #ccc;
+    font-size: 1em;
+    font-weight: 900;
 
     user-select: none;
 }
 
-.clear {
-    border-style: solid;
-    border-color: rgba(238, 238, 238, 0.26);
-    background-color: rgba(231, 231, 231, 0.089);
+.important-flag.open {
+    color: red
 }
 
-.cell.landmine {
-    background-color: rgb(235, 142, 55);
+.input-pane  #his-btn {
+
 }
 
-.cell.landmine.exploded {
-    background-color: rgb(198, 10, 235);
+.input-pane  #his-btn.open {
+    background-color: blue;
 }
 
-.cell.landmine.success {
-    background-color: rgb(30, 190, 156);
-}
